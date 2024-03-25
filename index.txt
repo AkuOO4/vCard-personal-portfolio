@@ -2,8 +2,8 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = AKSHAY K S
+AKSHAY K S
 Web developer
 
 Show Contacts

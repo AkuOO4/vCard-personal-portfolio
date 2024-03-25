@@ -261,8 +261,9 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  overflow-y: scroll;
+  width: 10px; /* for vertical scrollbar */
+  height: 5px;/
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -734,14 +735,17 @@ main {
 .clients { margin-bottom: 15px; }
 
 .clients-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: flex; /* Change to flex */
+  flex-wrap: wrap; /* Allow wrapping to fit items in rows */
+  justify-content: center;
+  align-items: center;
   gap: 15px;
-  margin: 0 -15px;
+  margin: 0;
   padding: 25px;
   padding-bottom: 25px;
-  overflow-x: auto;
+  overflow-y: auto;
+  height: 300px;
+  width: 100%;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
@@ -749,15 +753,17 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
+  flex: 1 1 auto; /* Allow items to grow and shrink to fit container */
+  min-width: calc(33.33% - 10px); /* Adjust min-width to fit two items with gap */
   scroll-snap-align: start;
 }
 
 .clients-item img {
-  width: 100%;
+  width: 50%; /* Adjust image width to fit its container */
   filter: grayscale(1);
   transition: var(--transition-1);
 }
+
 
 .clients-item img:hover { filter: grayscale(0); }
 
@@ -839,7 +845,8 @@ main {
  * skills 
  */
 
-.skills-title { margin-bottom: 20px; }
+.skills-title { margin-bottom: 20px;
+text-align: center; }
 
 .skills-list { padding: 20px; }
 
@@ -1413,7 +1420,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* testimonials */
 
-  .testimonials-title { margin-bottom: 25px; }
+  .testimonials-title { margin-bottom: 25px;
+   }
 
   .testimonials-list {
     gap: 30px;
@@ -1428,16 +1436,26 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .testimonials-avatar-box {
-    transform: translate(30px, -30px);
-    border-radius: 20px;
-  }
+    transform: translate(30px, 5px);
+    border-radius: 25%; /* Adjust the border radius for rounded edges */
+    box-shadow: 10px 5px 10px rgba(12, 1, 1, 0.416); /* Add a subtle shadow effect */    
+    overflow: hidden; /* Ensure the image fits within the rounded border */
+}
 
-  .testimonials-avatar-box img { width: 80px; }
+.testimonials-avatar-box img {
+    width: 100px;
+    height: 80px; /* Adjust the height to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the entire box */
+    border-radius: 25%; /* Ensure the image inside also has rounded edges */
+}
+
 
   .testimonials-item-title {
     margin-bottom: 10px;
-    margin-left: 95px;
-  }
+    margin-left: 120px; /* Remove the left margin */
+    margin-right: 0px; /* Add margin to the right */
+}
+
 
   .testimonials-text {
     line-clamp: 2;
@@ -1492,6 +1510,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #RESUME
    */
+
+
+   .resume-link {
+    text-align: center;
+    color: white; /* Set text color to white */
+    font-size: 20px; /* Set font size to bigger */
+    text-decoration: none; /* Remove underline */
+}
+
+.resume-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
 
   .timeline-list { margin-left: 65px; }
 
