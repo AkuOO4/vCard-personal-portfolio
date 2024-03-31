@@ -886,6 +886,78 @@ text-align: center; }
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333333; /* Dark grey background color */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 5;
+  display: none; /* Hidden by default */
+  box-shadow: 0 0 10px rgba(19, 19, 19, 0.141); /* Closer shadow */
+}
+
+.popup-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: translate(15px, -25px);
+  background: var(--bg-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+  color: white; /* Text color set to white */
+
+}
+
+.popup-title {
+  margin-bottom: 25px;
+  text-align: center; /* Center align the text */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Horizontally center the content */
+}
+
+
+.popup-text {
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  justify-content:center;
+
+}
+
+.close-popup {
+  position: relative; /* Adjusted to absolute positioning */
+  top: 10px; /* Adjusted to better position the close button */
+  right: 10px; /* Adjusted to better position the close button */
+  background: var(--onyx);
+  border-radius: 25%; /* Circular close button */
+  width: 25%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 18px;
+  opacity: 0.8;
+  z-index: 6;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 5;
+  display: none; /* Hidden by default */
+  opacity: 0.1;
+
+}
+
+
 
 .filter-list { display: none; }
 
@@ -1349,7 +1421,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box {
+     border-radius: 20%;
+     box-shadow: 10px 5px 10px rgba(12, 1, 1, 0.416); /* Add a subtle shadow effect */    
+    overflow: hidden;
+  }
 
   .avatar-box img { width: 120px; }
 

@@ -9,12 +9,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>AKSHAY - Personal Portfolio</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="./assets/images/dp.jpg" type="image/x-icon"> -->
 
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
@@ -51,11 +51,11 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/dp.jpg" alt="Akshay k s" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Richard hanrick"> AKSHAY K S</h1>
+          <h1 class="name" title="AKSHAY K S "> AKSHAY K S</h1>
 
           <p class="title">Artificial Intelligence and Data Science Student</p>
         </div>
@@ -301,13 +301,13 @@
           
             <li class="clients-item">
               <a href="#">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS logo" >
               </a>
             </li>
           
             <li class="clients-item">
               <a href="#">
-                <img src="https://miro.medium.com/v2/resize:fit:592/1*YM2HXc7f4v02pZBEO8h-qw.png" alt="Photoshop logo">
+                <img src="https://miro.medium.com/v2/resize:fit:592/1*YM2HXc7f4v02pZBEO8h-qw.png" alt="Photoshop logo" width="10px">
               </a>
             </li>
 
@@ -345,17 +345,12 @@
               <a href="#">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original-wordmark.svg">
               </a>
-            </li>
-
-       
-              
-            
-            
+            </li>  
            
 
                 <li class="clients-item">
                   <a href="#">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop logo">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" alt="Photoshop logo" width="20px">
                   </a>
                 </li>
 
@@ -850,44 +845,64 @@
           </div>
 
           <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
+            <li class="project-item active" data-filter-item data-category="web development" id="project-item-1">
+              <a href="#" class="project-link">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                  <img src="https://cdn-images-1.medium.com/max/1500/1*leuI7fVkeOrKAIGOOj_T9A.png" alt="finance" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
+                <h3 class="project-title">MOVIE RECOMMENDATION SYSTEM</h3>
+                <p class="project-category">Machine Learning</p>
               </a>
+          
+              <!-- Popup for project 1 -->
+              <div class="popup-overlay"></div>
+              <div class="popup">
+                <div class="popup-content">
+                  <h2 class="popup-title">MOVIE RECOMMENDATION SYSTEM</h2>
+                  <p class="popup-text">The users can select a movie they like and the programme would recommend 5 movies which are similar to it. The pre-processing of the data was done using NLP. Technologies used: Python.</p>
+                  <a href="https://example.com" target="_blank" class="popup-button">Visit Site</a>
+                  <button class="close-popup">Close</button>
+                </div>
+              </div>
+              <!-- End of Popup for project 1 -->
             </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
+          
+            <!-- Repeat the above structure for each project item -->
+            <!-- Example for project 2 -->
+            <li class="project-item active" data-filter-item data-category="Data Science" id="project-item-2">
+              <a href="#" class="project-link">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpvphmhqyjkb9xxmqzlwz.jpg" alt="orizon" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
+                <h3 class="project-title">Literacy Rate and Socio-economic Conditions</h3>
+                <p class="project-category">Data Science</p>
               </a>
+          
+              <!-- Popup for project 2 -->
+              <div class="popup-overlay"></div>
+              <div class="popup">
+                <div class="popup-content">
+                  <h2 class="popup-title">Literacy Rate and Socio-economic Conditions</h2>
+                  <p class="popup-text">It was a project to explore the relation between women’s literacy rate and various maternal child health outcomes to demonstrate Exploratory Data Analysis Capabilities.
+                    
+                    Technologies used: Python</p>
+                  <!-- Add additional content for project 2 -->
+                  <button class="close-popup">Close</button>
+                </div>
+              </div>
+              <!-- End of Popup for project 2 -->
             </li>
+            <!-- Repeat for other project items -->
+              
+              
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="Bio Informatics" id="project-item-3">
               <a href="#">
 
                 <figure class="project-img">
@@ -895,14 +910,28 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                  <img src="https://static.primary.prod.gcms.the-infra.com/static/site/bioinformatics/image/High+Impact+Collection+22/Bioinformatics+HI+Homepage.jpg?node=b86233588f67de292d38&version=541993:f813d79da60fd9fa8678" alt="fundo" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Fundo</h3>
+                <h3 class="project-title">Disease Classification (Ongoing)</h3>
 
-                <p class="project-category">Web design</p>
+                <p class="project-category">Bio Informatics</p>
 
               </a>
+
+                            <!-- Popup for project 2 -->
+                            <div class="popup-overlay"></div>
+                            <div class="popup">
+                              <div class="popup-content">
+                                <h2 class="popup-title">Disease Classification</h2>
+                                <p class="popup-text">It is an ongoing project to identify the persons who have parkinsons disease based on thier DNA Methylation Data .
+                                  
+                                  Current Status: Data from NCBI Database is being  preprocessed</p>
+                                <!-- Add additional content for project 2 -->
+                                <button class="close-popup">Close</button>
+                              </div>
+                            </div>
+
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">

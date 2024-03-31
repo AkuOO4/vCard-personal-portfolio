@@ -157,3 +157,101 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+// Get the popup element and the trigger element
+document.addEventListener("DOMContentLoaded", function() {
+  const projectItem = document.querySelector('.project-item');
+  const popupOverlay = document.querySelector('.popup-overlay');
+  const popup = document.querySelector('.popup');
+
+  projectItem.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Set popup content based on project item
+    const projectTitle = this.querySelector('.project-title').textContent;
+    const projectCategory = this.querySelector('.project-category').textContent;
+    // const popupContent = `<h2>${projectTitle}</h2><p>${projectCategory}</p>`;
+    // document.querySelector('.popup-text').innerHTML = popupContent;
+
+    // Show the popup
+    popup.style.display = 'block';
+    popupOverlay.style.display = 'block';
+  });
+
+  // Close the popup when close button is clicked
+  const closePopupButton = document.querySelector('.close-popup');
+  closePopupButton.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent the click event from propagating to the overlay
+    popup.style.display = 'none';
+    popupOverlay.style.display = 'none';
+  });
+
+  // Close the popup when clicking outside of it
+  popupOverlay.addEventListener('click', function() {
+    popup.style.display = 'none';
+    popupOverlay.style.display = 'none';
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const projectItem2 = document.getElementById('project-item-2');
+  const projectLink2 = projectItem2.querySelector('.project-link');
+  const popupOverlay2 = projectItem2.querySelector('.popup-overlay');
+  const popup2 = projectItem2.querySelector('.popup');
+
+  projectLink2.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Show the popup for project 2
+    popup2.style.display = 'block';
+    popupOverlay2.style.display = 'block';
+  });
+
+  // Close the popup for project 2 when close button is clicked
+  const closePopupButton2 = projectItem2.querySelector('.close-popup');
+  closePopupButton2.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent the click event from propagating to the overlay
+    popup2.style.display = 'none';
+    popupOverlay2.style.display = 'none';
+  });
+
+  // Close the popup for project 2 when clicking outside of it
+  popupOverlay2.addEventListener('click', function() {
+    popup2.style.display = 'none';
+    popupOverlay2.style.display = 'none';
+  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const projectItem3 = document.getElementById('project-item-3');
+  const projectLink3 = projectItem3.querySelector('.project-link');
+  const popupOverlay3 = projectItem3.querySelector('.popup-overlay');
+  const popup3 = projectItem3.querySelector('.popup');
+
+  projectLink3.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Show the popup for project 3
+    popup3.style.display = 'block';
+    popupOverlay3.style.display = 'block';
+  });
+
+  // Close the popup for project 3 when close button is clicked
+  const closePopupButton3 = projectItem3.querySelector('.close-popup');
+  closePopupButton3.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent the click event from propagating to the overlay
+    popup3.style.display = 'none';
+    popupOverlay3.style.display = 'none';
+  });
+
+  // Close the popup for project 3 when clicking outside of it
+  popupOverlay3.addEventListener('click', function() {
+    popup3.style.display = 'none';
+    popupOverlay3.style.display = 'none';
+  });
+});
+
