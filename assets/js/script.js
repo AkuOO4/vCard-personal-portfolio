@@ -225,33 +225,62 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const projectItem3 = document.getElementById('project-item-3');
+    const projectLink3 = projectItem3.querySelector('.project-link');
+    const popupOverlay3 = projectItem3.querySelector('.popup-overlay');
+    const popup3 = projectItem3.querySelector('.popup');
+  
+    projectLink3.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+  
+      // Show the popup for project 3
+      popup3.style.display = 'block';
+      popupOverlay3.style.display = 'block';
+    });
+  
+    // Close the popup for project 2 when close button is clicked
+    const closePopupButton3 = projectItem3.querySelector('.close-popup');
+    closePopupButton3.addEventListener('click', function(event) {
+      event.stopPropagation(); // Prevent the click event from propagating to the overlay
+      popup3.style.display = 'none';
+      popupOverlay3.style.display = 'none';
+    });
+  
+    // Close the popup for project 2 when clicking outside of it
+    popupOverlay3.addEventListener('click', function() {
+      popup3.style.display = 'none';
+      popupOverlay3.style.display = 'none';
+    });
+  });
+  
 
+  // Project 4
 document.addEventListener("DOMContentLoaded", function() {
-  const projectItem3 = document.getElementById('project-item-3');
-  const projectLink3 = projectItem3.querySelector('.project-link');
-  const popupOverlay3 = projectItem3.querySelector('.popup-overlay');
-  const popup3 = projectItem3.querySelector('.popup');
+  const projectItem4 = document.getElementById('project-item-4');
+  const projectLink4 = projectItem4.querySelector('a.project-link');
+  const popupOverlay4 = projectItem4.querySelector('.popup-overlay');
+  const popup4 = projectItem4.querySelector('.popup');
 
-  projectLink3.addEventListener('click', function(event) {
+  projectLink4.addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default link behavior
 
-    // Show the popup for project 3
-    popup3.style.display = 'block';
-    popupOverlay3.style.display = 'block';
+    // Show the popup for project 4
+    popup4.style.display = 'block';
+    popupOverlay4.style.display = 'block';
   });
 
-  // Close the popup for project 3 when close button is clicked
-  const closePopupButton3 = projectItem3.querySelector('.close-popup');
-  closePopupButton3.addEventListener('click', function(event) {
+  // Close the popup for project 4 when close button is clicked
+  const closePopupButton4 = projectItem4.querySelector('.close-popup');
+  closePopupButton4.addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent the click event from propagating to the overlay
-    popup3.style.display = 'none';
-    popupOverlay3.style.display = 'none';
+    popup4.style.display = 'none';
+    popupOverlay4.style.display = 'none';
   });
 
-  // Close the popup for project 3 when clicking outside of it
-  popupOverlay3.addEventListener('click', function() {
-    popup3.style.display = 'none';
-    popupOverlay3.style.display = 'none';
+  // Close the popup for project 4 when clicking outside of it
+  popupOverlay4.addEventListener('click', function() {
+    popup4.style.display = 'none';
+    popupOverlay4.style.display = 'none';
   });
 });
-
