@@ -738,7 +738,7 @@ main {
 .clients-list {
   display: flex; /* Change to flex */
   flex-wrap: wrap; /* Allow wrapping to fit items in rows */
-  justify-content: center;
+  justify-content: flex-start;;
   align-items: center;
   gap: 15px;
   margin: 0;
@@ -754,8 +754,8 @@ main {
 }
 
 .clients-item {
-  flex: 1 1 auto; /* Allow items to grow and shrink to fit container */
-  min-width: calc(33.33% - 10px); /* Adjust min-width to fit two items with gap */
+  flex: 0 1 auto; /* Allow items to grow and shrink to fit container */
+   min-width: auto; /*calc(10.33% - 5px); Adjust min-width to fit two items with gap */
   scroll-snap-align: start;
 }
 
